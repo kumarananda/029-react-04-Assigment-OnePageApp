@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: auto;
+    font-family: roboto;
+}
+
+body {
+    background: #666600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #999966, #666600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #999966, #666600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.team .social ul  {
+    float:left;
+}
+.team .social ul li {
+    list-style: none;
+}
