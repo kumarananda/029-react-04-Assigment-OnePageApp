@@ -2,3 +2,11 @@
 ul.all_devs_action {
     list-style: none;
 }
+
+.table > :not(caption) > * > * {
+	padding: .2rem .2rem;
+}
+.admin_table_bg {
+    background-color: #13a58a!important;
+
+}

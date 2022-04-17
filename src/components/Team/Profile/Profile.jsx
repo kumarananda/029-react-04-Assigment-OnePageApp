@@ -49,6 +49,7 @@ const Profile = () => {
                         
                         </Card.Body>
                         <Card.Footer className='text-end'>
+                            <a className='btn btn-success btn-sm' href="#">Edit data</a> &nbsp;
                             <a className='btn btn-success btn-sm' href="#">Back All Devs</a>
                         </Card.Footer>
                     </Card>
