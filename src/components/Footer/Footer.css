@@ -1,0 +1,12 @@
+.footerbg {
+    background-color: #30405f;
+    
+    
+}
+.footerbg .footer_content {
+    height: 60px;
+    color: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

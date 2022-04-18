@@ -10,3 +10,14 @@ ul.all_devs_action {
     background-color: #13a58a!important;
 
 }
+.react_mark {
+    background-color: #30405f;
+    
+
+}
+.addDevs .react_mark{
+    height: 100vh;
+}
+.anemasion {
+    position: relative;
+}
