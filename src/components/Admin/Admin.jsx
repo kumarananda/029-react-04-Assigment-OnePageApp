@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, Col, Container, Row, Table, Button } from 'react-bootstrap';
 import 'boxicons';
 import './Admin.css'
+import { Link } from 'react-router-dom';
 
 
 const Admin = () => {
@@ -15,7 +16,11 @@ const Admin = () => {
                     <Card className='admin_table_bg text-white '>
                         <Card.Header className='d-flex justify-content-between'>
                             <h2>All Developers Data</h2>
-                            <span><Button  className='btm-sm'>Add Developers</Button></span>
+                            <div>
+                                <span><Link to={"/"} className='btn-sm btn btn-primary '>All Developers</Link></span>&nbsp;
+                                <span><Link  to="/addDevs"className='btn-sm btn btn-primary '> Add Devs</Link></span>
+                            </div>
+                           
                         </Card.Header>
                         <Card.Body >
                             <Table className='  text-center'>

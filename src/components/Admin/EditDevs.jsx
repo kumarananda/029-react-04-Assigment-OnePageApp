@@ -64,8 +64,8 @@ const EditDevs = () => {
                                         
                                     </Card>
                                     <div className=" header_button">
-                                        <Link  to="/" className='btn btn-primary'> Back to all devs</Link> &nbsp;
-                                        <Link  to="/admin" className='btn btn-primary'> Back to dashbord</Link>
+                                        <Link  to="/" className='btn btn-primary btn-sm'> Back to all devs</Link> &nbsp;
+                                        <Link  to="/admin" className='btn btn-primary btn-sm'> Back to dashbord</Link>
                                     </div>
                                 </Col>
                                 <Col md={8}>
