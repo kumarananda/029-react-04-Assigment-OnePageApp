@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import 'boxicons';
 import './Profile.css'
+import { Link } from 'react-router-dom';
 
 
 const Profile = () => {
@@ -49,8 +50,8 @@ const Profile = () => {
                         
                         </Card.Body>
                         <Card.Footer className='text-end'>
-                            <a className='btn btn-success btn-sm' href="#">Edit data</a> &nbsp;
-                            <a className='btn btn-success btn-sm' href="#">Back All Devs</a>
+                            <Link className='btn btn-success btn-sm' to='/editDevs'>Edit data</Link> &nbsp;
+                            <Link className='btn btn-success btn-sm' to="/">Back All Devs</Link>
                         </Card.Footer>
                     </Card>
                 </Col>

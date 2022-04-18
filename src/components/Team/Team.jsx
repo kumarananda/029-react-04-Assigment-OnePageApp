@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Team = () => {
   return (
@@ -15,7 +16,7 @@ const Team = () => {
                       <span>Call: 01913918163</span>
                     </Card.Body>
                     <Card.Footer>
-                      <a href="#" className='btn btn-sm btn-success'>View Detiles</a>
+                      <Link to='/profile' className='btn btn-sm btn-success'>View Detiles</Link>
                     </Card.Footer>
                   </Card>
                 

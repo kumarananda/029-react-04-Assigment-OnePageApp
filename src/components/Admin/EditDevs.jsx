@@ -9,7 +9,7 @@ import ReactLogo from './ReactLogo/ReactLogo';
 import { Link } from 'react-router-dom';
 
 
-const AddDevs = () => {
+const EditDevs = () => {
   return (
     <section className='my-3 addDevs '>
         <Container>
@@ -24,14 +24,14 @@ const AddDevs = () => {
                 </Col> */}
                 <Col md={12}>
                     <Card>
-                        <Card.Header> <h3 className='text-center'>Add Developers Data</h3></Card.Header>
+                        <Card.Header> <h3 className='text-center'>Edit Developers Data</h3></Card.Header>
                         <Card.Body>
                         <Form >
                             <Row>
                                 <Col md={4}>
                                     <Card>
                                         <Card.Body>
-                                        <h4>View Preview</h4>
+                                        <h4>Edit Preview</h4>
                                             <Row>
                                                 <Col>
                                                 <Card.Img src={"https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg"} />
@@ -62,11 +62,10 @@ const AddDevs = () => {
                                             {/* <ReactLogo></ReactLogo> */}
                                         </div>
                                         
-                                        
                                     </Card>
                                     <div className=" header_button">
-                                        <Link  to="/" className='btn btn-primary btn-sm'> Back</Link> &nbsp;
-                                        <Link  to="/admin" className='btn btn-primary btn-sm'> Back to dashbord</Link>
+                                        <Link  to="/" className='btn btn-primary'> Back to all devs</Link> &nbsp;
+                                        <Link  to="/admin" className='btn btn-primary'> Back to dashbord</Link>
                                     </div>
                                 </Col>
                                 <Col md={8}>
@@ -130,4 +129,4 @@ const AddDevs = () => {
   )
 }
 
-export default AddDevs
+export default EditDevs
