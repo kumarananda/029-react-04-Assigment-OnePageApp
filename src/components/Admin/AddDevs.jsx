@@ -8,28 +8,74 @@ import './Admin.css'
 import ReactLogo from './ReactLogo/ReactLogo';
 import { Link } from 'react-router-dom';
 import aveterimg from './avatar.webp'
+import axios from 'axios'
 
 
 const AddDevs = () => {
 
     // from input with useState
     const [devinput, setDevinput ] = useState({
-        name : '',
-        uName : '',
-        cell: '',
-        photo : '',
-        email : '',
-        skill: '',
-        gender : '',
-        yt : '',
-        git : '',
-        tw : '',
-        lin : '',
-        fb :'',
+        name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
+        gender : '', yt : '', git : '', tw : '',  lin : '', fb :'',
         status: false
 
     });
     let {name, uName, cell, photo, email, skill, gender, yt, git, tw, lin, fb } = devinput;
+
+
+    let [submitalert, setSubmitalert] = useState({
+        msg : '',
+        type : "danger",
+        status : false
+
+    })
+    let {msg, type, status} = submitalert;
+
+
+
+       // Alert Close
+       const hundleFornSubmitAlert = ( ) => {
+        setSubmitalert({
+            msg : "",
+            type : '',
+            status : false
+        })
+    }
+
+    const hundleFornSubmit = (e) => {
+        e.preventDefault();
+
+        if( name==='' || uName==='' || cell==='' || photo==='' || email==='' || skill===''|| gender==='' ){
+            setSubmitalert({
+                msg : 'All primary data is require',
+                type : "danger",
+                status : true
+            });
+            
+        }else{
+            
+            axios.post('http://localhost:5050/developers', devinput).then(res => {
+                setSubmitalert({
+                    msg : 'Data stable',
+                    type : "success",
+                    status : true
+                })
+
+                setDevinput({
+                    name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
+                    gender : '', yt : '', git : '', tw : '',  lin : '', fb :''
+                
+                }).catch(error => {
+                    console.log(error);
+                })
+         
+            })
+
+        }
+
+
+    }
+
 
 
 
@@ -80,9 +126,15 @@ const AddDevs = () => {
                                     </Card>
                                 </Col>
                                 <Col md={8}>
-                                    <Row> <Col></Col><Col md={6}><Alert variant={"danger"} className="text-center" show={true}>{"message"}</Alert></Col></Row>
+                                    <Row> <Col></Col>
+                                        <Col md={6}>
+                                            {
+                                                status && <Alert className={`alert  alert-${type} d-flex justify-content-between`}>{msg}<button  onClick={ hundleFornSubmitAlert } className='btn-close'></button></Alert>
+                                            }
+                                          </Col>
+                                    </Row>
                                     
-                                    <Form >
+                                    <Form onSubmit={hundleFornSubmit} >
                                         <Row>
                                             <Col md={6}>
                                                 <div className="mb-1">

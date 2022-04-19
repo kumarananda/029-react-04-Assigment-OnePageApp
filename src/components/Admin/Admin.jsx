@@ -1,12 +1,38 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Table, Button } from 'react-bootstrap';
 import 'boxicons';
 import './Admin.css'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import '../Team/Profile/Profile'
+
 
 
 const Admin = () => {
+
+
+    // get ALLL USER DATA
+    const [developers, setDevelopers] = useState([])
+    // get ALLL USER DATA
+    useEffect( () => {
+        axios.get('http://localhost:5050/developers').then(res => {
+            setDevelopers(res.data)
+
+        }
+        ).catch(error => {
+            console.log(error);
+        })
+    },[ developers]) //will change after edit 
+
+    // delete developers profile
+    const handledeleteDevs = (id) => {
+        // Axios delete
+        axios.delete(`http://localhost:5050/developers/${id}`)
+    }
+
+    
+
   return (
     <section className='my-3 admin'>
         <Container >
@@ -38,24 +64,29 @@ const Admin = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ananda</td>
-                                        <td>Ananda44</td>
-                                        <td>anandasaha484@gmail.com</td>
-                                        <td>Male</td>
-                                        <td>MERN Stack</td>
-                                        <td>01913918163</td>
-                                        <td><img style={{width:"35px", height:"35px"}} src="https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg" alt="" /></td>
+                                    {
+                                        developers.map((data, index) =>
+                                        <tr>
+                                        <td>{ index + 1 }</td>
+                                        <td>{data.name}</td>
+                                        <td>{data.uName}</td>
+                                        <td>{data.email}</td>
+                                        <td>{data.gender}</td>
+                                        <td>{data.skill}</td>
+                                        <td>{data.cell}</td>
+                                        <td><img style={{width:"35px", height:"35px"}} src={data.photo} alt="" /></td>
                                         <td>
-                                            <Link to={"/profile"}  className='btn btn-sm btn-outline-info' title='Show'><i className='bx bx-show'></i></Link>
+                                            <Link to={`/profile/${data.id}`}  className='btn btn-sm btn-outline-info' title='Show'><i className='bx bx-show'></i></Link>
                                             <button className='btn btn-sm btn-success'  title='UnFreez Acount'><i className='bx bx-lock-open-alt'></i></button>
                                             <button className='btn btn-sm btn-outline-light'  title='Freez Acount'><i className='bx bx-lock-alt'></i></button>
                                             <Link to={"/editDevs"}  className='btn btn-sm btn-outline-warning' title='Edit'><i class='bx bx-edit-alt' ></i></Link>
-                                            <button className='btn btn-sm btn-outline-danger' title='Delete'><i class='bx bx-trash'></i></button>
+                                            <button onClick={() => handledeleteDevs(data.id)} className='btn btn-sm btn-outline-danger' title='Delete'><i class='bx bx-trash'></i></button>
                                             
                                         </td>
                                     </tr>
+                                        )
+                                    }
+                                    
                                 </tbody>
                             </Table>
                         </Card.Body>

@@ -13,24 +13,37 @@ import {  } from 'bootstrap';
 
 const EditDevs = () => {
 
-        // from input with useState
-        const [devinput, setDevinput ] = useState({
-            name : '',
-            uName : '',
-            cell: '',
-            photo : '',
-            email : '',
-            skill: '',
-            gender : '',
-            yt : '',
-            git : '',
-            tw : '',
-            lin : '',
-            fb :'',
-            status: false
-    
-        });
-        let {name, uName, cell, photo, email, skill, gender, yt, git, tw, lin, fb } = devinput;
+    // from input with useState
+    const [devinput, setDevinput ] = useState({
+        name : '',
+        uName : '',
+        cell: '',
+        photo : '',
+        email : '',
+        skill: '',
+        gender : '',
+        yt : '',
+        git : '',
+        tw : '',
+        lin : '',
+        fb :'',
+        status: false
+
+    });
+    let {name, uName, cell, photo, email, skill, gender, yt, git, tw, lin, fb } = devinput;
+
+
+
+    // Alert Close
+    // const hundleFornSubmitAlert = ( ) => {
+    //     setalert({
+    //         msg : "this is alert",
+    //         type : 'success',
+    //         status : false
+    //     })
+    // }
+
+
 
 
   return (
@@ -81,7 +94,7 @@ const EditDevs = () => {
                                 <Col md={8}>
                                 <Row> <Col></Col><Col md={6}><Alert variant={"danger"} className="text-center" show={true}>{"message"}</Alert></Col></Row>
                                 
-                                    <Form >
+                                    <Form  >
                                         <Row>
                                             <Col md={6}>
                                                 <div className="mb-1">

@@ -4,9 +4,20 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import 'boxicons';
 import './Profile.css'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 const Profile = () => {
+
+    // const {} 
+    const handleSingleProfile = (id) => {
+        axios.get(`http://localhost:5050/developers/${id}`).then(res => {
+
+        })
+    }
+    
+
+
   return (
     <section className='profile'>
         <Container>
