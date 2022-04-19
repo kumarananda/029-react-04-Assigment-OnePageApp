@@ -10,7 +10,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <section className='footerbg'>
+    <section className='footerbg mt-2'>
         <Container >
             <Row>
                 <Col className='footer_content'>

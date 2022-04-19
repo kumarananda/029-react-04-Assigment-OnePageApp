@@ -48,10 +48,10 @@ const Admin = () => {
                                         <td>01913918163</td>
                                         <td><img style={{width:"35px", height:"35px"}} src="https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg" alt="" /></td>
                                         <td>
-                                            <a  className='btn btn-sm btn-outline-info' title='Show'><i className='bx bx-show'></i></a>
+                                            <Link to={"/profile"}  className='btn btn-sm btn-outline-info' title='Show'><i className='bx bx-show'></i></Link>
                                             <button className='btn btn-sm btn-success'  title='UnFreez Acount'><i className='bx bx-lock-open-alt'></i></button>
                                             <button className='btn btn-sm btn-outline-light'  title='Freez Acount'><i className='bx bx-lock-alt'></i></button>
-                                            <a  className='btn btn-sm btn-outline-warning' title='Edit'><i class='bx bx-edit-alt' ></i></a>
+                                            <Link to={"/editDevs"}  className='btn btn-sm btn-outline-warning' title='Edit'><i class='bx bx-edit-alt' ></i></Link>
                                             <button className='btn btn-sm btn-outline-danger' title='Delete'><i class='bx bx-trash'></i></button>
                                             
                                         </td>

@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <section className='headerbg'>
+    <section className='headerbg mb-2'>
         <Container >
             <Row>
-                <Col className='my-3 header '>
+                <Col className=' header '>
                     <div className="header_logo"><Link to="/"> <ReactLogo/></Link>  
                     <Link to="/"><h5 className=''>ReactOnePageApp</h5> </Link>                  
                     </div>
