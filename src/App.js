@@ -20,7 +20,7 @@ function App() {
           <Route path='/profile/:id' element={ <Profile></Profile> }/>
           <Route path='/addDevs' element={ <AddDevs></AddDevs> }/>
           <Route path='/admin' element={ <Admin></Admin> }/>
-          <Route path='/editDevs' element={ <EditDevs></EditDevs> }/>
+          <Route path='/editDevs/:id' element={ <EditDevs></EditDevs> }/>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
@@ -30,12 +30,3 @@ function App() {
 }
 
 export default App;
-
-/**
- *       <Header></Header>
-      <AddDevs></AddDevs>
-      <Admin></Admin>
-      <Team></Team>
-      <Profile></Profile>
-      <Footer></Footer>
- */

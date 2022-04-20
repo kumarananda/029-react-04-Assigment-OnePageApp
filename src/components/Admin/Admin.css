@@ -5,13 +5,15 @@ ul.all_devs_action {
 
 .table > :not(caption) > * > * {
 	padding: .2rem .2rem;
+    color: aliceblue;
 }
 .admin_table_bg {
-    background-color: #13a58a!important;
+    background-color: #193a34!important;
+    
 
 }
 .react_mark {
-    background-color: #30405f;
+    background-color: #25324d;
     
 
 }

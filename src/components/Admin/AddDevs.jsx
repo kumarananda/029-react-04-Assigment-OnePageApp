@@ -15,8 +15,8 @@ const AddDevs = () => {
 
     // from input with useState
     const [devinput, setDevinput ] = useState({
-        // name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
-        // gender : '', yt : '', git : '', tw : '',  lin : '', fb :'',
+        name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
+        gender : '', yt : '', git : '', tw : '',  lin : '', fb :'',
         status: false
 
     });

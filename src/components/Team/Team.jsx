@@ -11,7 +11,7 @@ const Team = () => {
   useEffect(() => {
     axios.get(`http://localhost:5050/developers`).then(res => {
       setDevs(res.data);
-      console.log(res.data);
+
     }).catch(err => {
       console.log(err);
     })

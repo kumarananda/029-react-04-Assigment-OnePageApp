@@ -30,7 +30,7 @@ useEffect(() => {
             <Row className='d-flex  justify-content-center profile-item align-items-center  '>
 
                 <Col md={8} className="my-3  ">
-                    <Card  className='bg-lite bg-primary'>
+                    <Card  className='bg-lite bg-info'>
                         <Card.Header className='text-center'>
                         <h2>Developers Detiles</h2>
                         </Card.Header>

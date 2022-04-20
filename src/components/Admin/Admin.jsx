@@ -30,6 +30,20 @@ const Admin = () => {
         // Axios delete
         axios.delete(`http://localhost:5050/developers/${id}`)
     }
+    // show on all devs page
+    const handleUnFreez = (id) => {
+        axios.patch(`http://localhost:5050/developers/${id}`, {
+            status : true
+        } )
+
+    }
+
+    // hide from all devs page
+    const handleFreez = (id) => {
+        axios.patch(`http://localhost:5050/developers/${id}`, {
+            status : false
+        } )
+    }
 
     
 
@@ -77,9 +91,9 @@ const Admin = () => {
                                         <td><img style={{width:"35px", height:"35px"}} src={data.photo} alt="" /></td>
                                         <td>
                                             <Link to={`/profile/${data.id}`}  className='btn btn-sm btn-outline-info' title='Show'><i className='bx bx-show'></i></Link>
-                                            <button className='btn btn-sm btn-success'  title='UnFreez Acount'><i className='bx bx-lock-open-alt'></i></button>
-                                            <button className='btn btn-sm btn-outline-light'  title='Freez Acount'><i className='bx bx-lock-alt'></i></button>
-                                            <Link to={"/editDevs"}  className='btn btn-sm btn-outline-warning' title='Edit'><i class='bx bx-edit-alt' ></i></Link>
+                                            <button onClick={() => handleUnFreez(data.id)} className='btn btn-sm btn-success'  title='UnFreez Acount'><i className='bx bx-lock-open-alt'></i></button>
+                                            <button onClick={() => handleFreez(data.id)} className='btn btn-sm btn-outline-light'  title='Freez Acount'><i className='bx bx-lock-alt'></i></button>
+                                            <Link to={`/editDevs/${data.id}`}  className='btn btn-sm btn-outline-warning' title='Edit'><i class='bx bx-edit-alt' ></i></Link>
                                             <button onClick={() => handledeleteDevs(data.id)} className='btn btn-sm btn-outline-danger' title='Delete'><i class='bx bx-trash'></i></button>
                                             
                                         </td>
