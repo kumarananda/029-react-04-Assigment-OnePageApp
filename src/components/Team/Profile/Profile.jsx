@@ -56,12 +56,10 @@ useEffect(() => {
                                             {
                                                 getSdevs.fb && <li><a href={getSdevs.fb}><i class='bx bxl-facebook'></i></a></li>
                                             }
-                                            
                                             { getSdevs.lin && <li><a href={getSdevs.lin}><i class='bx bxl-linkedin' ></i></a></li>}
                                             { getSdevs.lin && <li><a href={getSdevs.lin}><i class='bx bxl-linkedin' ></i></a></li>}
                                             { getSdevs.git && <li><a href={getSdevs.git}><i class='bx bxl-github' ></i></a></li>}
                                             { getSdevs.yt && <li><a href={getSdevs.yt}><i class='bx bxl-youtube' ></i></a></li>}
-
                                         </ul>
                                     </div>
                                     
