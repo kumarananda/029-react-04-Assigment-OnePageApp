@@ -24,7 +24,7 @@ const Team = () => {
         <Container>
             <Row className=''  >
               {
-                devs.map(data =>
+                devs.map(data => data.status && 
                   <Col md={2} className="my-3 ">
                   <Card>
                     <Card.Img src={ data.photo }/>

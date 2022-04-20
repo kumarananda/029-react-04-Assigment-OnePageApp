@@ -13,8 +13,40 @@
       "tw": "dddd",
       "lin": "#ddd",
       "fb": "#ddd",
-      "status": false,
+      "status": true,
       "id": 1
+    },
+    {
+      "name": "Ananda Kumar saha",
+      "uName": "ananda52",
+      "cell": "01913918163",
+      "photo": "https://avatars.githubusercontent.com/u/95589865?v=4",
+      "email": "anandasaha484",
+      "skill": "MERN Stack",
+      "gender": "Male",
+      "yt": "dddd",
+      "git": "#dd",
+      "tw": "dddd",
+      "lin": "#ddd",
+      "fb": "#ddd",
+      "status": true,
+      "id": 2
+    },
+    {
+      "name": "Ananda Kumar saha",
+      "uName": "ananda52",
+      "cell": "01913918163",
+      "photo": "https://avatars.githubusercontent.com/u/95589865?v=4",
+      "email": "anandasaha484",
+      "skill": "MERN Stack",
+      "gender": "Male",
+      "yt": "dddd",
+      "git": "#dd",
+      "tw": "dddd",
+      "lin": "#ddd",
+      "fb": "#ddd",
+      "status": true,
+      "id": 3
     }
   ]
 }
