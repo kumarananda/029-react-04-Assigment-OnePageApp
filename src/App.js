@@ -17,7 +17,7 @@ function App() {
       <Header></Header>
         <Routes>
           <Route path='/' element={ <Team></Team> }/>
-          <Route path='/profile' element={ <Profile></Profile> }/>
+          <Route path='/profile/:id' element={ <Profile></Profile> }/>
           <Route path='/addDevs' element={ <AddDevs></AddDevs> }/>
           <Route path='/admin' element={ <Admin></Admin> }/>
           <Route path='/editDevs' element={ <EditDevs></EditDevs> }/>

@@ -1,21 +1,27 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import 'boxicons';
 import './Profile.css'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
 const Profile = () => {
 
-    // const {} 
-    const handleSingleProfile = (id) => {
-        axios.get(`http://localhost:5050/developers/${id}`).then(res => {
+const [getSdevs , setGetSdevs] = useState([])
 
-        })
-    }
-    
+//Profile params
+const  prams  = useParams();
+
+// console.log(prams);
+
+useEffect(() => {
+    axios.get('http://localhost:5050/developers/' + prams.id).then(res => {
+        setGetSdevs(res.data)
+    })
+},[]);
+
 
 
   return (
@@ -33,25 +39,28 @@ const Profile = () => {
                             <Row className='bg-lite'>
                                 <Col>
                                     <Card className='p_img'>
-                                    <Card.Img  src="https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg"/>
+                                    <Card.Img  src={getSdevs.photo}/>
                                     </Card>
                                 </Col>
                                 <Col className='d-flex  justify-content-center profile-content align-items-center'>
                                     <div className="data text-center">
-                                        <h4>Ananda Kumar Saha</h4>
-                                        <h5>User name: ananda44</h5>
-                                        <h6>Email: anandasaha484@gmail.com</h6>
-                                        <h6>Genger: Male</h6>
-                                        <h6>Skill: MERN Stack</h6>
-                                        <span>Cell: 01913918163</span>
+                                        <h4>{getSdevs.name}</h4>
+                                        <h5>User name: {getSdevs.uName}</h5>
+                                        <h6>Email: {getSdevs.email}</h6>
+                                        <h6>Genger: {getSdevs.gender}</h6>
+                                        <h6>Skill: {getSdevs.skill}</h6>
+                                        <span>Cell: {getSdevs.cell}</span>
                                     </div>
                                     <div className="social">
                                         <ul className=''>
-                                            <li><a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a></li>
-                                            <li><a href="https://www.linkedin.com"><i class='bx bxl-linkedin' ></i></a></li>
-                                            <li><a href="https://twitter.com"><i class='bx bxl-twitter'></i></a></li>
-                                            <li><a href="#"><i class='bx bxl-github'></i></a></li>
-                                            <li><a href="https://www.youtube.com"><i class='bx bxl-youtube'></i></a></li>
+                                            {
+                                                getSdevs.fb && <li><a href={getSdevs.fb}><i class='bx bxl-facebook'></i></a></li>
+                                            }
+                                            
+                                            { getSdevs.lin && <li><a href={getSdevs.lin}><i class='bx bxl-linkedin' ></i></a></li>}
+                                            { getSdevs.lin && <li><a href={getSdevs.lin}><i class='bx bxl-linkedin' ></i></a></li>}
+                                            { getSdevs.git && <li><a href={getSdevs.git}><i class='bx bxl-github' ></i></a></li>}
+                                            { getSdevs.yt && <li><a href={getSdevs.yt}><i class='bx bxl-youtube' ></i></a></li>}
 
                                         </ul>
                                     </div>

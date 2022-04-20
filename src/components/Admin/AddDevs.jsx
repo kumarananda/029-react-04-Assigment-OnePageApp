@@ -15,8 +15,8 @@ const AddDevs = () => {
 
     // from input with useState
     const [devinput, setDevinput ] = useState({
-        name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
-        gender : '', yt : '', git : '', tw : '',  lin : '', fb :'',
+        // name : '', uName : '', cell: '',  photo : '',  email : '',  skill: '',
+        // gender : '', yt : '', git : '', tw : '',  lin : '', fb :'',
         status: false
 
     });
@@ -108,7 +108,6 @@ const AddDevs = () => {
                                     </Card>
                                     <Card className='anemasion'>
                                         <Card.Body >
-                                            
                                             <p>Name: </p> <h5>{ name ? name :"will show hare" }</h5>
                                             <p>Email: </p> <h5>{ email ? email :"will show hare" }</h5>
                                             <p>Genger: </p> <h6> {gender ? gender :"will show hare"}</h6>

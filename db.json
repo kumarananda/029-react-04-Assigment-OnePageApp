@@ -1,20 +1,48 @@
 {
   "developers": [
     {
-      "name": "bdfghfd",
-      "uName": "sgsdgsdg",
-      "cell": "sfgdsg",
-      "photo": "sgfds",
-      "email": "fdsgf",
-      "skill": "fgdsgfsd",
+      "name": "akdfa",
+      "uName": "allgjfg",
+      "cell": "ljgsklfkgjdajg",
+      "photo": "https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg",
+      "email": "jskljgagj",
+      "skill": "jfklgjs",
       "gender": "Female",
-      "yt": "",
-      "git": "",
+      "yt": "dhfdhdf",
+      "git": "dhfdh",
+      "tw": "dhdhfh",
+      "lin": "fgdhdhdh",
+      "fb": "hfgh",
+      "status": false,
+      "id": 1
+    },
+    {
+      "name": "fghsfg.nhjl",
+      "uName": "gsfdlfkl",
+      "cell": "FBFGKL",
+      "photo": "https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg",
+      "email": "RSKLDLrfdg;ar",
+      "skill": "fdha;lgj",
+      "gender": "Female",
+      "yt": "agfdg",
+      "git": "gsfd",
       "tw": "",
       "lin": "",
       "fb": "",
       "status": false,
-      "id": 1
+      "id": 2
+    },
+    {
+      "status": false,
+      "name": "sdgfa",
+      "uName": "agfad",
+      "cell": "agfaf",
+      "photo": "https://www.team.gsamdani.com/wp-content/uploads/2016/05/tm1.jpg",
+      "email": "afgad",
+      "skill": "afgafd",
+      "gender": "Female",
+      "yt": "agarfg",
+      "id": 3
     }
   ]
 }
