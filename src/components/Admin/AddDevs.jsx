@@ -195,11 +195,8 @@ const AddDevs = () => {
                                                     <Form.Control value={ yt } onChange={e => setDevinput(  { ...devinput, yt : e.target.value }  )} />
 
                                                 </div>
-                                                <div className="mb-1">
-                                                    <Form.Label>Facebook</Form.Label>
-                                                    <Form.Control type="text" placeholder="Enter email" />
-                                                </div>
-                                                <Button className='w-100' variant="primary" type="submit">Submit</Button>
+
+                                                <Button className='w-100 mt-4' variant="primary" type="submit">Submit</Button>
                                     
                                             </Col>
                                         </Row>

@@ -16,7 +16,6 @@ import axios from 'axios'
 
 const EditDevs = () => {
 
-
     //Profile params
     const  prams  = useParams();
     let {id} = prams
@@ -28,10 +27,12 @@ const EditDevs = () => {
         status: false
 
     });
+
     let {name, uName, cell, photo, email, skill, gender, yt, git, tw, lin, fb } = devinput;
 
     // console.log(devinput);
 
+    // Hendel submit alert with useStatus  and status key
     let [submitalert, setSubmitalert] = useState({
         msg : '',
         type : "danger",
@@ -40,9 +41,7 @@ const EditDevs = () => {
     })
     let {msg, type, status} = submitalert;
 
-
-
-       // Alert Close
+    // Alert Close
        const hundleFornSubmitAlert = ( ) => {
         setSubmitalert({
             msg : "",
@@ -67,6 +66,7 @@ const EditDevs = () => {
         e.preventDefault();
 
         if( name==='' || uName==='' || cell==='' || photo==='' || email==='' || skill===''|| gender==='' ){
+            // alert show when selected value is get empty
             setSubmitalert({
                 msg : 'All primary data is require',
                 type : "danger",
@@ -75,9 +75,10 @@ const EditDevs = () => {
             
         }else{
             
+            // data edit requast on server
             axios.patch('http://localhost:5050/developers/' + id, devinput).then(res => {
                 setSubmitalert({
-                    msg : 'Data stable',
+                    msg : 'Data Udate Successfully',
                     type : "success",
                     status : true
                 })
@@ -158,7 +159,7 @@ const EditDevs = () => {
                                         <Row>
                                             <Col md={6}>
                                                 <div className="mb-1">
-                                                    <Form.Label>Name</Form.Label>
+                                                    <Form.Label>Name</Form.Label>                          {/*  ...devinput keep others key value and will update tergated value   */}
                                                     <Form.Control value={ name } onChange={e => setDevinput(  { ...devinput, name : e.target.value }  )} type="text"  />
                                                 </div>
                                                 <div className="mb-1">
@@ -218,7 +219,7 @@ const EditDevs = () => {
 
                                                 </div>
 
-                                                <Button className='w-100' variant="primary" type="submit">Submit</Button>
+                                                <Button className='w-100 mt-4' variant="primary" type="submit">Submit</Button>
                                     
                                             </Col>
                                         </Row>

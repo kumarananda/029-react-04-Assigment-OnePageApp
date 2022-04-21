@@ -9,18 +9,21 @@ import axios from 'axios';
 
 const Profile = () => {
 
-const [getSdevs , setGetSdevs] = useState([])
 
-//Profile params
-const  prams  = useParams();
+    // set all devdlopers data on "getSdevs" using useState
+    const [getSdevs , setGetSdevs] = useState({})
 
-// console.log(prams);
+    //Profile params
+    const  prams  = useParams();
 
-useEffect(() => {
-    axios.get('http://localhost:5050/developers/' + prams.id).then(res => {
-        setGetSdevs(res.data)
-    })
-},[]);
+    // console.log(prams);
+
+    // get single data 
+    useEffect(() => {
+        axios.get('http://localhost:5050/developers/' + prams.id).then(res => {
+            setGetSdevs(res.data)
+        })
+    },[]);
 
 
 
@@ -68,7 +71,7 @@ useEffect(() => {
                         
                         </Card.Body>
                         <Card.Footer className='text-end'>
-                            <Link className='btn btn-success btn-sm' to='/editDevs'>Edit data</Link> &nbsp;
+                            <Link className='btn btn-success btn-sm' to={`/editDevs/${getSdevs.id}`}>Edit data</Link> &nbsp;
                             <Link className='btn btn-success btn-sm' to="/">Back All Devs</Link>
                         </Card.Footer>
                     </Card>
